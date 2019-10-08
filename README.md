@@ -9,11 +9,14 @@ This project is dedicated to testing RS Components UI via Selenium/Java/Cucumber
 . Open in IDEA
 . Create new *JUNIT* run/debug configuration with the below parameters
 Class = "steps.Runner"
-_VM options = "-Dcucumber.options="--tags @SearchByMenu"
+_VM options = "-Dcucumber.options="--tags @E2ESearchByMenu"
 
 
-You can use various **tags** like **~@Ignore** to exclude some scenarios from the test suit
-**`mvn test -DcucumberOptions=" --tags ~@Filters2,@SearchByMenu"`**
+You can use various **tags** like **@UITests** to run all scenarios from the feature file
+**`mvn test -DcucumberOptions=" --tags @UITests"`**
+OR
+individual tests by specifying individual tags for example
+**`mvn test -DcucumberOptions=" --tags @E2ESearchByMenu"`**
 
 
 
